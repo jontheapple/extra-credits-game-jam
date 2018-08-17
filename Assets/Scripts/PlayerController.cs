@@ -9,11 +9,13 @@ public class PlayerController : PhysicsObject {
 
   private SpriteRenderer spriteRenderer;
 	private bool doublejumped;
+	private bool facingRight;
 
   // Use this for initialization
   void Awake () 
   {
-    spriteRenderer = GetComponent<SpriteRenderer> (); 
+    spriteRenderer = GetComponent<SpriteRenderer> ();
+		facingRight = true;
 		doublejumped = false;
   }
 
@@ -30,12 +32,17 @@ public class PlayerController : PhysicsObject {
         }
     }
 
-    bool flipSprite = (!spriteRenderer.flipX ? (move.x > 0.01f) : (move.x < 0.01f));
-    if (flipSprite) 
-    {
-        spriteRenderer.flipX = !spriteRenderer.flipX;
-    }
-				
+    if (facingRight) {
+			if (move.x < 0f){
+				spriteRenderer.flipX = !spriteRenderer.flipX;
+				facingRight = false;
+			}
+		} else {
+			if (move.x > 0f){
+				spriteRenderer.flipX = !spriteRenderer.flipX;
+				facingRight = true;
+			}
+		}
 
     targetVelocity = move * maxSpeed;
 	}
