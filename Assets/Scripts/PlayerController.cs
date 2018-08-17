@@ -2,48 +2,57 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : PhysicsObject {
+public class PlayerController : MonoBehaviour {
 
-  public float maxSpeed = 7;
-  public float jumpTakeOffSpeed = 7;
+	public float maxSpeed = 10f;
+	bool facingRight = true;
 
-  private SpriteRenderer spriteRenderer;
-	private bool doublejumped;
-	private bool facingRight;
+	bool grounded = false;
+	bool doublejump = true;
+	public Transform groundCheck;
+	float groundRadius = 0.2f;
+	public LayerMask whatIsGround;
+	
+	private Rigidbody2D rb2d;
+	private float jumpForce = 7f;
+	private float dbljumpForce = 5f;
 
-  // Use this for initialization
-  void Awake () 
-  {
-    spriteRenderer = GetComponent<SpriteRenderer> ();
-		facingRight = true;
-		doublejumped = false;
-  }
+	// Use this for initialization
+	void Start () {
+		rb2d = GetComponent<Rigidbody2D>();
+	}
 
-  protected override void ComputeVelocity()
-  {
-		Vector2 move = Vector2.zero;
-		move.x = Input.GetAxis ("Horizontal");
-
-    if (Input.GetButtonDown ("Jump") && grounded) {
-        velocity.y = jumpTakeOffSpeed;
-    } else if (Input.GetButtonUp ("Jump")) {
-        if (velocity.y > 0) {
-            velocity.y = velocity.y * 0.5f;
-        }
-    }
-
-    if (facingRight) {
-			if (move.x < 0f){
-				spriteRenderer.flipX = !spriteRenderer.flipX;
-				facingRight = false;
-			}
-		} else {
-			if (move.x > 0f){
-				spriteRenderer.flipX = !spriteRenderer.flipX;
-				facingRight = true;
-			}
+	void Update() {
+		if (grounded && Input.GetButtonDown("Jump")) {
+			rb2d.velocity = new Vector2(rb2d.velocity.x, jumpForce);
+			grounded = false;
+		} else if (!grounded && doublejump && Input.GetButtonDown("Jump")) {
+			rb2d.velocity = new Vector2(rb2d.velocity.x, dbljumpForce);
+			doublejump = false;
 		}
+	}
+	
+	// Update is called once per frame
+	void FixedUpdate () {
+		grounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround);
+		if (grounded) doublejump = true;
 
-    targetVelocity = move * maxSpeed;
+
+		float move = Input.GetAxis("Horizontal");
+
+		rb2d.velocity = new Vector2(move * maxSpeed, rb2d.velocity.y);
+
+		if(move > 0 && !facingRight) {
+			Flip();
+		} else if (move < 0 && facingRight) {
+			Flip();
+		}
+	}
+
+	void Flip() {
+		facingRight = !facingRight;
+		Vector3 theScale = transform.localScale;
+		theScale.x *= -1;
+		transform.localScale = theScale;
 	}
 }
