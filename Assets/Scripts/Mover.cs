@@ -17,7 +17,7 @@ public class Mover : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        travelCounter += Time.deltaTime;
+        travelCounter += Global.deltaTime;
         float x = 0;
         float y = 0;
         if (-HorizontalBounds.x + HorizontalBounds.y > 0) {
