@@ -14,8 +14,8 @@ public class PlayerController : MonoBehaviour {
 	public LayerMask whatIsGround;
 	
 	private Rigidbody2D rb2d;
-	private float jumpForce = 7f;
-	private float dbljumpForce = 5f;
+	private float jumpForce = 9f;
+	private float dbljumpForce = 8f;
 
 	// Use this for initialization
 	void Start () {
