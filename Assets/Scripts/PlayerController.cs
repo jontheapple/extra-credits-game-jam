@@ -9,30 +9,35 @@ public class PlayerController : MonoBehaviour {
 
 	bool grounded = false;
 	bool doublejump = true;
+	private float jumpForce = 9f;
+	private float dbljumpForce = 8f;
+
 	public Transform groundCheck;
 	float groundRadius = 0.2f;
 	public LayerMask whatIsGround;
 	
 	private Rigidbody2D rb2d;
-	private float jumpForce = 9f;
-	private float dbljumpForce = 8f;
+
+	private bool timeSlow = false;
+	private float timeSlowFactor = 1;
+
 
 	// Use this for initialization
 	void Start () {
 		rb2d = GetComponent<Rigidbody2D>();
 	}
 
+	// Update is called once per frame
 	void Update() {
 		if (grounded && Input.GetButtonDown("Jump")) {
-			rb2d.velocity = new Vector2(rb2d.velocity.x, jumpForce);
+			rb2d.velocity = new Vector2(rb2d.velocity.x, jumpForce * timeSlowFactor);
 			grounded = false;
 		} else if (!grounded && doublejump && Input.GetButtonDown("Jump")) {
-			rb2d.velocity = new Vector2(rb2d.velocity.x, dbljumpForce);
+			rb2d.velocity = new Vector2(rb2d.velocity.x, dbljumpForce * timeSlowFactor);
 			doublejump = false;
 		}
 	}
 	
-	// Update is called once per frame
 	void FixedUpdate () {
 		grounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround);
 		if (grounded) doublejump = true;
@@ -40,7 +45,7 @@ public class PlayerController : MonoBehaviour {
 
 		float move = Input.GetAxis("Horizontal");
 
-		rb2d.velocity = new Vector2(move * maxSpeed, rb2d.velocity.y);
+		rb2d.velocity = new Vector2(move * maxSpeed * timeSlowFactor, rb2d.velocity.y);
 
 		if(move > 0 && !facingRight) {
 			Flip();
@@ -54,5 +59,19 @@ public class PlayerController : MonoBehaviour {
 		Vector3 theScale = transform.localScale;
 		theScale.x *= -1;
 		transform.localScale = theScale;
+	}
+
+	public void activateTimeSlow() {
+		timeSlow = true;
+		timeSlowFactor = TimeStatic.timeSlowFactor;
+		rb2d.velocity = new Vector2(rb2d.velocity.x, rb2d.velocity.y * timeSlowFactor);
+		rb2d.gravityScale = rb2d.gravityScale * timeSlowFactor * timeSlowFactor;
+	}
+
+	public void deactivateTimeSlow() {
+		timeSlow = false;
+		rb2d.velocity = new Vector2(rb2d.velocity.x, rb2d.velocity.y / timeSlowFactor);
+		rb2d.gravityScale = rb2d.gravityScale / timeSlowFactor / timeSlowFactor;
+		timeSlowFactor = 1;
 	}
 }
