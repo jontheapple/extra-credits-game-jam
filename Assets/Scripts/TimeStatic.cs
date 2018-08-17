@@ -3,5 +3,5 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public static class TimeStatic{
-	public static float timeSlowFactor = 0.5f;
+	public static float timeSlowFactor = 0.3f;
 }
