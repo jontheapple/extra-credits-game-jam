@@ -17,8 +17,7 @@ public class PlayerController : MonoBehaviour {
 	public LayerMask whatIsGround;
 	
 	private Rigidbody2D rb2d;
-
-	private bool timeSlow = false;
+	
 	private float timeSlowFactor = 1;
 	private Vector3 startingPosition;
 
@@ -37,6 +36,11 @@ public class PlayerController : MonoBehaviour {
 		} else if (!grounded && doublejump && Input.GetButtonDown("Jump")) {
 			rb2d.velocity = new Vector2(rb2d.velocity.x, dbljumpForce * timeSlowFactor);
 			doublejump = false;
+		}
+		if (Input.GetButtonDown("TimeSlow")) {
+			activateTimeSlow();
+		} else if (Input.GetButtonUp("TimeSlow")) {
+			deactivateTimeSlow();
 		}
 	}
 	
@@ -58,13 +62,10 @@ public class PlayerController : MonoBehaviour {
 
 	void Flip() {
 		facingRight = !facingRight;
-		Vector3 theScale = transform.localScale;
-		theScale.x *= -1;
-		transform.localScale = theScale;
+		GetComponent<SpriteRenderer>().flipX = !GetComponent<SpriteRenderer>().flipX;
 	}
 
 	public void activateTimeSlow() {
-		timeSlow = true;
 		timeSlowFactor = TimeStatic.timeSlowFactor;
 		rb2d.velocity = new Vector2(rb2d.velocity.x, rb2d.velocity.y * timeSlowFactor);
 		rb2d.gravityScale = rb2d.gravityScale * timeSlowFactor * timeSlowFactor;
@@ -72,7 +73,6 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	public void deactivateTimeSlow() {
-		timeSlow = false;
 		rb2d.velocity = new Vector2(rb2d.velocity.x, rb2d.velocity.y / timeSlowFactor);
 		rb2d.gravityScale = rb2d.gravityScale / timeSlowFactor / timeSlowFactor;
 		timeSlowFactor = 1;
