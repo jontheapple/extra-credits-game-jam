@@ -5,6 +5,8 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour {
 
 	public GameObject player;
+	public float leftBound;
+	public float rightBound;
 
 	// Use this for initialization
 	void Start () {
@@ -15,8 +17,8 @@ public class CameraFollow : MonoBehaviour {
 	void Update () {
 		Vector3 position = transform.position;
 		position.x = player.transform.position.x + 5f;
-		if (position.x < 1.75f) position.x = 1.75f;
-		if (position.x > 41.127f) position.x = 41.127f;
+		if (position.x < leftBound) position.x = leftBound;
+		if (position.x > rightBound) position.x = rightBound;
 		transform.position = position;
 	}
 }

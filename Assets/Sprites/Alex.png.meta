@@ -116,9 +116,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 480
-        width: 640
-        height: 480
+        y: 256
+        width: 512
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -126,7 +126,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5dc5cb0088d78c74c8b9e2d99f568cef
+      spriteID: b86189ddeb8199c4aa391f532b03579d
       vertices: []
       indices: 
       edges: []
@@ -135,10 +135,10 @@ TextureImporter:
       name: Alex_1
       rect:
         serializedVersion: 2
-        x: 640
-        y: 480
-        width: 640
-        height: 480
+        x: 512
+        y: 256
+        width: 512
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,7 +146,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 31c00620b0b2c614fac1f295f93e2b98
+      spriteID: 84c4f01733c834c438180b5e7c8c007a
       vertices: []
       indices: 
       edges: []
@@ -155,10 +155,10 @@ TextureImporter:
       name: Alex_2
       rect:
         serializedVersion: 2
-        x: 1280
-        y: 480
-        width: 640
-        height: 480
+        x: 1024
+        y: 256
+        width: 512
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,7 +166,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c45a74686e2380a4888bb4df5f8ecb1e
+      spriteID: a7685e3680127fe43858a9ad61f3d2a2
       vertices: []
       indices: 
       edges: []
@@ -177,8 +177,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 640
-        height: 480
+        width: 512
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -186,7 +186,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b9bdbff3cff55b8448b3869a95a2cc09
+      spriteID: c6b4677255a56284faf7ea75d1e26918
       vertices: []
       indices: 
       edges: []
@@ -195,10 +195,10 @@ TextureImporter:
       name: Alex_4
       rect:
         serializedVersion: 2
-        x: 640
+        x: 512
         y: 0
-        width: 640
-        height: 480
+        width: 512
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,7 +206,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d5a4b1bd26a9cf4dba3332fa0961a2f
+      spriteID: 2a2ef7bfb2ad89f47896ec5886c47f1f
       vertices: []
       indices: 
       edges: []
@@ -215,10 +215,10 @@ TextureImporter:
       name: Alex_5
       rect:
         serializedVersion: 2
-        x: 1280
+        x: 1024
         y: 0
-        width: 640
-        height: 480
+        width: 512
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,7 +226,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ef47c3c4b5b4394a8ac969b12635fd0
+      spriteID: d2ad7fd85381ef24da3f145c5512a868
       vertices: []
       indices: 
       edges: []
