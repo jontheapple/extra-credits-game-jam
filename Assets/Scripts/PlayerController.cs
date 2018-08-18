@@ -37,7 +37,6 @@ public class PlayerController : MonoBehaviour {
 
 		if (grounded && Input.GetButtonDown("Jump")) {
 			rb2d.velocity = new Vector2(rb2d.velocity.x, jumpForce * timeSlowFactor);
-			grounded = false;
 		} else if (!grounded && doublejump && Input.GetButtonDown("Jump")) {
 			rb2d.velocity = new Vector2(rb2d.velocity.x, dbljumpForce * timeSlowFactor);
 			doublejump = false;
@@ -50,10 +49,6 @@ public class PlayerController : MonoBehaviour {
 	}
 	
 	void FixedUpdate () {
-		grounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround);
-		if (grounded) doublejump = true;
-
-
 		float move = Input.GetAxis("Horizontal");
 
 		rb2d.velocity = new Vector2(move * maxSpeed * timeSlowFactor, rb2d.velocity.y);
