@@ -15,7 +15,7 @@ public class GoalScript : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D col) {
-		if (col.name == "GoalTrigger") {
+		if (col.name == "Player") {
 			Debug.Log("You win");
 		}
 	}
