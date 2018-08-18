@@ -8,8 +8,8 @@ public class PlayerController : MonoBehaviour {
 	public float maxSpeed = 10f;
 	bool facingRight = true;
 
-	bool grounded = false;
-	bool doublejump = true;
+	public bool grounded = false;
+	public bool doublejump = true;
 	private float jumpForce = 9f;
 	private float dbljumpForce = 8f;
 
