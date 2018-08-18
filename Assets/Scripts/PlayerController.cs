@@ -21,7 +21,9 @@ public class PlayerController : MonoBehaviour {
 	
 	private float timeSlowFactor = 1;
 	private Vector3 startingPosition;
+	private float move;
 
+	public float Horizontal { get { return move; } }
 
 	// Use this for initialization
 	void Start () {
@@ -49,7 +51,7 @@ public class PlayerController : MonoBehaviour {
 	}
 	
 	void FixedUpdate () {
-		float move = Input.GetAxis("Horizontal");
+		move = Input.GetAxis("Horizontal");
 
 		rb2d.velocity = new Vector2(move * maxSpeed * timeSlowFactor, rb2d.velocity.y);
 

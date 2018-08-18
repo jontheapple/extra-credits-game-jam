@@ -138,7 +138,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 6.4, y: 4.8}
-    newSize: {x: 4.2, y: 7.44}
+    newSize: {x: 6.4, y: 4.8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -157,11 +157,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 216a006eab669cf4ebd26fbefcce629b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loop: 1
-  frameSeconds: 1
-  sprites:
-  - {fileID: 21300000, guid: 47f4cdf1061877847ae7238d800499d7, type: 3}
-  - {fileID: 21300002, guid: 47f4cdf1061877847ae7238d800499d7, type: 3}
+  IdleFrameSeconds: 1
+  idle:
+  - {fileID: 21300000, guid: 44a517016c0c9c34c96edc91fb9c906c, type: 3}
+  - {fileID: 21300002, guid: 44a517016c0c9c34c96edc91fb9c906c, type: 3}
+  - {fileID: 21300000, guid: 44a517016c0c9c34c96edc91fb9c906c, type: 3}
+  - {fileID: 21300004, guid: 44a517016c0c9c34c96edc91fb9c906c, type: 3}
+  RunningFrameSeconds: 0.25
+  running:
+  - {fileID: 21300008, guid: 44a517016c0c9c34c96edc91fb9c906c, type: 3}
+  - {fileID: 21300010, guid: 44a517016c0c9c34c96edc91fb9c906c, type: 3}
+  - {fileID: 21300006, guid: 44a517016c0c9c34c96edc91fb9c906c, type: 3}
+  AirborneFrameSeconds: 1
+  airborne:
+  - {fileID: 21300006, guid: 44a517016c0c9c34c96edc91fb9c906c, type: 3}
 --- !u!114 &114680620774774628
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -237,12 +246,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 47f4cdf1061877847ae7238d800499d7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 44a517016c0c9c34c96edc91fb9c906c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 4.2, y: 7.44}
+  m_Size: {x: 6.4, y: 4.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

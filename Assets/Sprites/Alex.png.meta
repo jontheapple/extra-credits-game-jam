@@ -1,9 +1,13 @@
 fileFormatVersion: 2
-guid: 47f4cdf1061877847ae7238d800499d7
+guid: 44a517016c0c9c34c96edc91fb9c906c
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Alex Idle Sprite_0
-    21300002: Alex Idle Sprite_1
+    21300000: Alex_0
+    21300002: Alex_1
+    21300004: Alex_2
+    21300006: Alex_3
+    21300008: Alex_4
+    21300010: Alex_5
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -48,7 +52,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 0, y: 0, z: 640, w: 0}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -108,7 +112,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Alex Idle Sprite_0
+      name: Alex_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 480
+        width: 640
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dc5cb0088d78c74c8b9e2d99f568cef
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alex_1
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 480
+        width: 640
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31c00620b0b2c614fac1f295f93e2b98
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alex_2
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 480
+        width: 640
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c45a74686e2380a4888bb4df5f8ecb1e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alex_3
       rect:
         serializedVersion: 2
         x: 0
@@ -122,18 +186,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af1163b9e879e8746887ec3da8dbc875
+      spriteID: b9bdbff3cff55b8448b3869a95a2cc09
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Alex Idle Sprite_1
+      name: Alex_4
       rect:
         serializedVersion: 2
         x: 640
         y: 0
-        width: 632
+        width: 640
         height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -142,7 +206,27 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f2b92abbbed851b45b5f07e218cc3a4e
+      spriteID: 1d5a4b1bd26a9cf4dba3332fa0961a2f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alex_5
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 640
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ef47c3c4b5b4394a8ac969b12635fd0
       vertices: []
       indices: 
       edges: []
@@ -150,7 +234,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 9fbf8093adea9634395ec967f2a5db27
+    spriteID: 06c3a911c9ae6474196799acb11b7558
     vertices: []
     indices: 
     edges: []
