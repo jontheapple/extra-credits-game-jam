@@ -20,11 +20,13 @@ public class PlayerController : MonoBehaviour {
 
 	private bool timeSlow = false;
 	private float timeSlowFactor = 1;
+	private Vector3 startingPosition;
 
 
 	// Use this for initialization
 	void Start () {
 		rb2d = GetComponent<Rigidbody2D>();
+		startingPosition = transform.position;
 	}
 
 	// Update is called once per frame
@@ -75,5 +77,10 @@ public class PlayerController : MonoBehaviour {
 		rb2d.gravityScale = rb2d.gravityScale / timeSlowFactor / timeSlowFactor;
 		timeSlowFactor = 1;
 		Global.speed = timeSlowFactor;
+	}
+
+	public void Reset() {
+		rb2d.velocity = Vector2.zero;
+		transform.position = startingPosition;
 	}
 }
