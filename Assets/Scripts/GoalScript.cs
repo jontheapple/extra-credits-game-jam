@@ -28,6 +28,9 @@ public class GoalScript : MonoBehaviour {
 				SceneManager.LoadScene("JonLevel1");
 			}
 			if (sceneName == "JonLevel1") {
+				SceneManager.LoadScene("JonLevel2");
+			}
+			if (sceneName == "JonLevel2") {
 				SceneManager.LoadScene("MainMenu");
 			}
 		}

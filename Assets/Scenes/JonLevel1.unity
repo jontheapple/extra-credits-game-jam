@@ -710,9 +710,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 660e8becc7e36544cb7583f4a017672c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1934201906}
+  target: {fileID: 1934201906}
   leftBound: 1.75
   rightBound: 41.127
+  followX: 1
+  xOffset: 5
+  followY: 0
+  yOffset: 0
 --- !u!1001 &765878295
 Prefab:
   m_ObjectHideFlags: 0

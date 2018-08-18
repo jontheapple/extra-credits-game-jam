@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Killbox : MonoBehaviour {
 
@@ -17,7 +18,7 @@ public class Killbox : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
 		PlayerController player = other.gameObject.GetComponent<PlayerController>();
 		if (player != null) {
-			player.Reset();
+			SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 		}
 	}
 }
