@@ -66,6 +66,7 @@ public class PlayerController : MonoBehaviour {
 		timeSlowFactor = TimeStatic.timeSlowFactor;
 		rb2d.velocity = new Vector2(rb2d.velocity.x, rb2d.velocity.y * timeSlowFactor);
 		rb2d.gravityScale = rb2d.gravityScale * timeSlowFactor * timeSlowFactor;
+		Global.speed = timeSlowFactor;
 	}
 
 	public void deactivateTimeSlow() {
@@ -73,5 +74,6 @@ public class PlayerController : MonoBehaviour {
 		rb2d.velocity = new Vector2(rb2d.velocity.x, rb2d.velocity.y / timeSlowFactor);
 		rb2d.gravityScale = rb2d.gravityScale / timeSlowFactor / timeSlowFactor;
 		timeSlowFactor = 1;
+		Global.speed = timeSlowFactor;
 	}
 }
