@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GoalScript : MonoBehaviour {
 
@@ -16,7 +17,19 @@ public class GoalScript : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D col) {
 		if (col.name == "Player") {
-			Debug.Log("You win");
+			string sceneName = SceneManager.GetActiveScene().name;
+			if (sceneName == "Tutorial1") {
+				SceneManager.LoadScene("Tutorial2");
+			}
+			if (sceneName == "Tutorial2") {
+				SceneManager.LoadScene("Tutorial3");
+			}
+			if (sceneName == "Tutorial3") {
+				SceneManager.LoadScene("Level");
+			}
+			if (sceneName == "Level") {
+				SceneManager.LoadScene("MainMenu");
+			}
 		}
 	}
 }

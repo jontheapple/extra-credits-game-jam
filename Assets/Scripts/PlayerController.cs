@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
 
@@ -30,6 +31,10 @@ public class PlayerController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update() {
+		if (Input.GetButtonDown("Cancel")){
+			SceneManager.LoadScene("MainMenu");
+		}
+
 		if (grounded && Input.GetButtonDown("Jump")) {
 			rb2d.velocity = new Vector2(rb2d.velocity.x, jumpForce * timeSlowFactor);
 			grounded = false;
@@ -69,14 +74,12 @@ public class PlayerController : MonoBehaviour {
 		timeSlowFactor = TimeStatic.timeSlowFactor;
 		rb2d.velocity = new Vector2(rb2d.velocity.x, rb2d.velocity.y * timeSlowFactor);
 		rb2d.gravityScale = rb2d.gravityScale * timeSlowFactor * timeSlowFactor;
-		Global.speed = timeSlowFactor;
 	}
 
 	public void deactivateTimeSlow() {
 		rb2d.velocity = new Vector2(rb2d.velocity.x, rb2d.velocity.y / timeSlowFactor);
 		rb2d.gravityScale = rb2d.gravityScale / timeSlowFactor / timeSlowFactor;
 		timeSlowFactor = 1;
-		Global.speed = timeSlowFactor;
 	}
 
 	public void Reset() {
