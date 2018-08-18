@@ -711,6 +711,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1934201906}
+  leftBound: 1.75
+  rightBound: 41.127
 --- !u!1001 &765878295
 Prefab:
   m_ObjectHideFlags: 0
