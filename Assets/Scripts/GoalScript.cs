@@ -14,7 +14,7 @@ public class GoalScript : MonoBehaviour {
 		"Ben1",
 		"Connor1",
 		"JonLevel2",
-		"MainMenu"
+		"Credits"
 	};
 
 	// Use this for initialization
