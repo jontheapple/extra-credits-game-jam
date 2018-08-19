@@ -185,6 +185,8 @@ MonoBehaviour:
   maxSpeed: 10
   grounded: 0
   doublejump: 1
+  DoubleJumpEffect: {fileID: 1201177445570408, guid: 7fddcb48670517243b85c313fd4ebe7a,
+    type: 2}
   groundCheck: {fileID: 4385555691490844}
   whatIsGround:
     serializedVersion: 2
