@@ -22,13 +22,14 @@ public class GroundCheck : MonoBehaviour
 
     void FixedUpdate()
     {
-        acceleration = (rb2d.velocity - lastVelocity) / Time.fixedDeltaTime;
-        lastVelocity = rb2d.velocity;
+        //acceleration = (rb2d.velocity - lastVelocity) / Time.fixedDeltaTime;
+        //lastVelocity = rb2d.velocity;
     }
 
     void OnTriggerStay2D(Collider2D coll)
     {
-        if (acceleration.y == 0)
+        //if (acceleration.y == 0)
+				if (coll.gameObject.layer == LayerMask.NameToLayer("Default"))
         {
             transform.parent.GetComponent<PlayerController>().grounded = true;
             transform.parent.GetComponent<PlayerController>().doublejump = true;
