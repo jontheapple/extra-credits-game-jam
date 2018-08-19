@@ -11,6 +11,7 @@ public class GoalScript : MonoBehaviour {
 		"Connor's Shitty 3rd level",
 		"Connor2",
 		"JonLevel1",
+		"Ben1",
 		"Connor1",
 		"JonLevel2"
 	};

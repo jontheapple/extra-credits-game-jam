@@ -37,6 +37,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4942514471825124}
   - component: {fileID: 212676526517999358}
+  - component: {fileID: 114111656305845570}
   m_Layer: 9
   m_Name: Goal
   m_TagString: Untagged
@@ -64,7 +65,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1982276465303934}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.92, y: 2.82, z: 0}
+  m_LocalPosition: {x: 49.26, y: -3.07, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4564963665032784}
@@ -96,6 +97,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.32, y: 0.32}
   m_EdgeRadius: 0
+--- !u!114 &114111656305845570
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1982276465303934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69ad27495c4cca241836325958b307a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: {x: 0, y: 0.2}
+  HorizontalBounds: {x: 0, y: 0}
+  VerticalBounds: {x: 0, y: 0.2}
 --- !u!114 &114405236745707700
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -142,7 +157,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d9497fa2dedc9cf4491bc49417cca441, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c4c0144c0b8d13949a0373ac61315e55, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
