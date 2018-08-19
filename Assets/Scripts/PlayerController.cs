@@ -58,8 +58,9 @@ public class PlayerController : MonoBehaviour {
 			}
 		}
 
+		//bound downwards velocity
+		if (timeslow && rb2d.velocity.y < -20f * timeSlowFactor) rb2d.velocity = new Vector2(rb2d.velocity.x, -20f * timeSlowFactor);
 		if (rb2d.velocity.y < -20f) rb2d.velocity = new Vector2(rb2d.velocity.x, -20f);
-		print(rb2d.velocity.y);
 	}
 	
 	void FixedUpdate () {
