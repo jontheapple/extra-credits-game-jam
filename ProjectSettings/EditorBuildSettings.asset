@@ -26,4 +26,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/JonLevel2.unity
     guid: 93d373976630fa840b83e709eed49c80
+  - enabled: 1
+    path: Assets/Scenes/Connor's Shitty 3rd level.unity
+    guid: 56d247a8217804d2ba5fabfb2b15ca36
+  - enabled: 1
+    path: Assets/Scenes/Connor1.unity
+    guid: 833f017a8d4554ff581ac6a2403e4d33
+  - enabled: 1
+    path: Assets/Scenes/Connor2.unity
+    guid: fd643fc7bcdcf46aea7e39c95e02a381
+  - enabled: 1
+    path: Assets/Scenes/Ben1.unity
+    guid: df265d560e77f3e4c8f94c689ec3b9a3
   m_configObjects: {}

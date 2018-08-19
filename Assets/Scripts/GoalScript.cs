@@ -13,7 +13,8 @@ public class GoalScript : MonoBehaviour {
 		"JonLevel1",
 		"Ben1",
 		"Connor1",
-		"JonLevel2"
+		"JonLevel2",
+		"MainMenu"
 	};
 
 	// Use this for initialization
@@ -29,7 +30,7 @@ public class GoalScript : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D col) {
 		if (col.name == "Player") {
 			string sceneName = SceneManager.GetActiveScene().name;
-			SceneManager.LoadScene(System.Array.IndexOf(LevelNames, sceneName) + 1);
+			SceneManager.LoadScene(LevelNames[System.Array.IndexOf(LevelNames, sceneName) + 1]);
 		}
 	}
 }
