@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour {
 	private float timeSlowFactor = 1;
 	private Vector3 startingPosition;
 	private float move;
+	private bool timeslow = false;
 
 	public float Horizontal { get { return move; } }
 
@@ -46,9 +47,15 @@ public class PlayerController : MonoBehaviour {
 			doublejump = false;
 		}
 		if (Input.GetButtonDown("TimeSlow")) {
-			activateTimeSlow();
+			if (!timeslow){
+				activateTimeSlow();
+				timeslow = true;
+			}
 		} else if (Input.GetButtonUp("TimeSlow")) {
-			deactivateTimeSlow();
+			if (timeslow){
+				deactivateTimeSlow();
+				timeslow = false;
+			}
 		}
 	}
 	
