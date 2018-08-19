@@ -25,9 +25,18 @@ public class GoalScript : MonoBehaviour {
 				SceneManager.LoadScene("Tutorial3");
 			}
 			if (sceneName == "Tutorial3") {
+				SceneManager.LoadScene("Connor's Shitty 3rd level");
+			}
+			if (sceneName == "Connor's Shitty 3rd level") {
+				SceneManager.LoadScene("Connor2");
+			}
+			if (sceneName == "Connor2") {
 				SceneManager.LoadScene("JonLevel1");
 			}
 			if (sceneName == "JonLevel1") {
+				SceneManager.LoadScene("Connor1");
+			}
+			if (sceneName == "Connor1") {
 				SceneManager.LoadScene("JonLevel2");
 			}
 			if (sceneName == "JonLevel2") {
