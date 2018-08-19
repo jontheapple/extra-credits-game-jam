@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour {
 
 	public bool grounded = false;
 	public bool doublejump = true;
+	public GameObject DoubleJumpEffect;
 	private float jumpForce = 9f;
 	private float dbljumpForce = 8f;
 
@@ -40,6 +41,7 @@ public class PlayerController : MonoBehaviour {
 		if (grounded && Input.GetButtonDown("Jump")) {
 			rb2d.velocity = new Vector2(rb2d.velocity.x, jumpForce * timeSlowFactor);
 		} else if (!grounded && doublejump && Input.GetButtonDown("Jump")) {
+			GameObject.Instantiate(DoubleJumpEffect, transform.position, Quaternion.identity);
 			rb2d.velocity = new Vector2(rb2d.velocity.x, dbljumpForce * timeSlowFactor);
 			doublejump = false;
 		}
