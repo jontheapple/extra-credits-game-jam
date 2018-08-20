@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4422695382898130}
   - component: {fileID: 212513949597848390}
   - component: {fileID: 114588679947234138}
+  - component: {fileID: 114262724293348888}
   m_Layer: 0
   m_Name: Hazard
   m_TagString: Untagged
@@ -97,6 +98,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.32, y: 0.32}
   m_EdgeRadius: 0
+--- !u!114 &114262724293348888
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1684976633643016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aea1b1a9df5162439c5ef9c22c431c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Spike: {fileID: 1381777106780702, guid: a9775429e6de5f9488fdd7eca36f917e, type: 2}
+  Box: {fileID: 1953215200600628, guid: d19831fb33438184fb14e4ae2cf61565, type: 2}
+  AngryFace: {fileID: 1406460461667716, guid: 4ad183bea67b74f47a779c1000084eb2, type: 2}
+  HideOriginalSprite: 1
 --- !u!114 &114588679947234138
 MonoBehaviour:
   m_ObjectHideFlags: 1
