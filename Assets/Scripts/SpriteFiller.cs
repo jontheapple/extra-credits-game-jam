@@ -14,13 +14,14 @@ public class SpriteFiller : MonoBehaviour {
 			GetComponent<SpriteRenderer>().enabled = false;
 		}
 
-		if (GetComponent<Mover>() != null && GetComponent<Mover>().Speed != Vector2.zero) { // angry box
+		//if (GetComponent<Mover>() != null && GetComponent<Mover>().Speed != Vector2.zero) { // angry box
 			Vector3 scale = transform.localScale;
 			GameObject box = GameObject.Instantiate(Box, new Vector3(transform.position.x, transform.position.y, transform.position.z + 0.00001f), Quaternion.identity);
 			box.transform.parent = transform;
 			box.transform.localScale = Vector3.one;
 			GameObject af = GameObject.Instantiate(AngryFace, transform.position, Quaternion.identity);
 			af.transform.parent = transform;
+		/*
 		} else { // spikeballs
 			Vector3 scale = transform.localScale;
 			for (int i = 0; i < scale.y; i++) {
@@ -29,7 +30,7 @@ public class SpriteFiller : MonoBehaviour {
 					spike.transform.parent = transform;
 				}
 			}
-			
+		*/	
 			/* random scattered
 			Vector3 scale = transform.localScale;
 			float amount = Mathf.Sqrt(scale.x * scale.y);
@@ -40,6 +41,6 @@ public class SpriteFiller : MonoBehaviour {
 				go.transform.parent = transform;
 			}
 			*/
-		}
+		//}
 	}
 }
