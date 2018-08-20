@@ -10,6 +10,9 @@ public class SpriteChanger : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		string sceneName = SceneManager.GetActiveScene().name;
-		GetComponent<SpriteRenderer>().sprite = Replacements[System.Array.IndexOf(LevelNames, sceneName)];
+		int levelIndex = System.Array.IndexOf(LevelNames, sceneName);
+		if (levelIndex >= 0) {
+			GetComponent<SpriteRenderer>().sprite = Replacements[System.Array.IndexOf(LevelNames, sceneName)];
+		}
 	}
 }
