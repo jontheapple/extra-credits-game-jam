@@ -7,12 +7,12 @@ public class FadeWhite : MonoBehaviour {
 	public float FadeRate;
 	private Image image;
 	private float targetAlpha;
+	private bool fading;
 
 	private float timer;
 
 	// Use this for initialization
 	void Start () {
-		timer = Time.time;
 		this.image = this.GetComponent<Image>();
 		if(this.image==null)
 		{
@@ -22,8 +22,7 @@ public class FadeWhite : MonoBehaviour {
 		color.a = 0;
 		this.image.color = color;
 		this.targetAlpha = this.image.color.a;
-
-		FadeIn();
+		fading = false;
 	}
 
 	// Update is called once per frame
@@ -35,7 +34,13 @@ public class FadeWhite : MonoBehaviour {
 			this.image.color = curColor;
 		}
 
-		if (Time.time - 4 > timer) {
+		if (Input.GetButtonDown("Right") || Input.GetButtonDown("TimeSlow")) {
+			FadeIn();
+			timer = Time.time;
+			fading = true;
+		}
+
+		if (fading && Time.time - 3.5f > timer) {
 			SceneManager.LoadScene("Credits");
 		}
 	}
