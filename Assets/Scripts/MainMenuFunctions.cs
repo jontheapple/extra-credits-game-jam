@@ -10,7 +10,7 @@ public class MainMenuFunctions : MonoBehaviour {
 	public GameObject credits;
 
 	public void StartGame() {
-		SceneManager.LoadScene("Tutorial1");
+		SceneManager.LoadScene("Intro");
 	}
 
 	public void Quit() {
