@@ -47,4 +47,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Midtro.unity
     guid: 8841eb4ff2edb2f42b79140dbc0619d1
+  - enabled: 1
+    path: Assets/Scenes/Outro.unity
+    guid: 32e447aa1cbc0d4429464b409f8806ff
   m_configObjects: {}
