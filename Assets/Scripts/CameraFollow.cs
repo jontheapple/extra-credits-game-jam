@@ -12,9 +12,10 @@ public class CameraFollow : MonoBehaviour {
 	public bool followY;
 	public float yOffset;
 
+
 	// Use this for initialization
 	void Start () {
-		
+
 	}
 	
 	// Update is called once per frame
